@@ -286,8 +286,7 @@ color: var(--secondary-text-color);
 }
 
 .timeline__date{
-  
-  opacity: 0.5;
+  color: var(--text-decoration-color)
 }
 
 .timeline__text{
@@ -295,13 +294,11 @@ color: var(--secondary-text-color);
   padding-left: 10px;
 }
 
-.timeline__text li{
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-}
-
-.perion__name{
-  font-family: "Lucida Console";
+.timeline__text li::before{
+  content: "🠒";
+  vertical-align: center;
+  color: black;
+  font-size: large;
+  display: inline-block;
+  margin-left: 0;
 }
