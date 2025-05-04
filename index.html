@@ -200,10 +200,58 @@
             </div>
           </div>
         </div>
+
+        <div class="container">
+          <div class="fun-facts__block">
+            <div class="timeline">
+              <h3 class="timeline__header">Fun fucts</h3>
+              <div class="fun-facts__item">
+                tea>coffee
+                
+              </div>
+              <div class="fun-facts__item">
+                sometimes my cat sabotages my workflow
+              </div>
+              <div class="fun-facts__item">
+                coldest winter > hottest summer
+              </div>
+
+              <div class="fun-facts__item">
+                i ❤️ sleep deprivation
+              </div>
+                
+              
+            </div>
+          </div>
+        </div>
         
 
       </div>
     </main>
+  
+    <!--Фан факти у випадковій позиції при кліки на контейнер та при завантаженні дерева-->
+    <script>
+      const items = document.querySelectorAll('.fun-facts__item');
+      const parentFunFactsContainer = document.querySelector(".fun-facts__block");
 
+      function changeItemsPosition(){
+        const { width, height } = parentFunFactsContainer.getBoundingClientRect();
+        const centerX = width / 2;
+        const centerY = height / 2;
+
+        items.forEach(item => {
+          const newTop = Math.floor(Math.random() * 200 - 100);
+          const newLeft = Math.floor(Math.random() * 200 - 150); 
+          
+          item.style.top = `${newTop + centerY}px`;
+          item.style.left = `${newLeft + centerX}px`;
+        });
+      }
+
+      parentFunFactsContainer.addEventListener("click", changeItemsPosition);
+      document.addEventListener('DOMContentLoaded', changeItemsPosition);
+      
+    </script>
   </body>
+
 </html>

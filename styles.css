@@ -305,3 +305,23 @@ color: var(--secondary-text-color);
 .perion__name{
   font-family: "Lucida Console";
 }
+
+/*Fun facts*/
+
+
+.fun-facts__block {
+  position: relative;
+  height: 400px;
+  min-height: 300px;
+}
+
+.fun-facts__item{
+  position: absolute;
+  transition: top 0.3s ease, left 0.3s ease;
+  
+  display: inline-block;
+  width: auto;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  padding: 5px;
+}
+
